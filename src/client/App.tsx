@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import * as ReactDOM from "react-dom/client";
 import {
     createBrowserRouter,
+    createHashRouter,
     RouterProvider, useLocation,
 } from "react-router-dom";
 import {connect, ConnectedProps, Provider} from 'react-redux'
@@ -25,7 +26,7 @@ function NoMatch() {
     );
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Dashboard />,
